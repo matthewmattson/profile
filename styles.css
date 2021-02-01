@@ -1,7 +1,8 @@
 body{
-    background-color: #f7f7ff;
+    background-color: #ffffff;
     overflow: hidden; 
 }
+
 
 .wrapper {
     padding: 1rem;
@@ -9,15 +10,6 @@ body{
 
 /*Animations*/
 
-.transition-fade {
-    opacity: 1; 
-    transition: 500ms; 
-}
-
-html.is-animating .transition-fade { 
-    opacity: 0; 
-
-}
 
 /*Headers & Paragraphs*/ 
 
@@ -31,24 +23,45 @@ h3 {
     font-weight: 400; 
 }
 
+p { 
+  font-family: como, sans-serif;
+  font-weight: 200; 
+  font-size: 18px;
+}
+
 /*Images*/ 
 #matt { 
   width: 200px; 
   height: 200px;  
   object-fit: cover; 
-  border-radius: 50%;
-  margin-top:30%; 
-  position: center; 
+  border-radius: 50%; 
+  justify-content: center; 
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
   
 }
 
 #txtmatt { 
-  position: center; 
-  margin-top: 5%; 
+  justify-content: center; 
+  margin-top: 50%;
+  margin-left: 17%
+  
 }
 
-/*Disable scroll*/
-html, body {margin: 0; height: 100%; overflow: hidden}
+#logo { 
+  width: 450px; 
+  height: 110px; 
+  margin-top: 10%; 
+  margin-left: 5%; 
+}
+
+/*Disable scroll
+html, body {margin: 0; height: 100%; overflow: hidden}*/
 
 
 /*Column Grid*/
@@ -56,8 +69,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     display: grid;
     height: 100vh; 
     width: 100vw; 
-    min-height: 0;
-    min-width: 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr 1fr 50px;
     gap: 1% 1%;
@@ -70,66 +81,115 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     
   }
 
-  .top-left { 
+  .body { 
+    display: grid; 
+    grid-template-columns: 1fr 3fr; 
+    overflow: hidden; 
+  }
+
+  .row1-left { 
     grid-area: a; 
     justify-self: center;
   }
-  .top-center { 
+  .row1-center { 
     grid-area: b; 
     justify-self: center;
     
   }
 
-  .top-right { 
+  .row1-right { 
     grid-area: c; 
     justify-self: center;
   }
 
-  .mid-left { 
+  .row2-left { 
     grid-area: d; 
     justify-self: center;
   }
   
-  .mid-center { 
+  .row2-center { 
     grid-area: e; 
     justify-self: center;
   }
 
-  .mid-right { 
+  .row2-right { 
     grid-area: f; 
     justify-self: center;
   }
 
-  .bottom-left { 
+  .row3-left { 
     grid-area: g; 
     justify-self: center;
   }
 
-  .bottom-center { 
+  .row3-center { 
+    grid-area: h; 
+    justify-self: center;
+}
+
+  .row3-center-scroll { 
       grid-area: h; 
       justify-self: center;
+      overflow-y: scroll; 
+      padding: 20px; 
+      width: 100%; 
+      height: 100%; 
+      border-radius: 2%;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
   }
 
-  .bottom-right { 
+  @media only screen and (max-width: 479px) { 
+    .row3-center-scroll{ 
+      width: 10%; 
+      height: 10%; 
+    }
+  }
+
+  .row3-right { 
     grid-area: i; 
     justify-self: center;
   }
 
-  .card { 
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
-}
+  .row4-left { 
+    grid-area: j; 
+    justify-self: center;
+  }
+
+  .row4-center { 
+      grid-area: k; 
+      justify-self: center;
+  }
+
+  .row4-right { 
+    grid-area: l; 
+    justify-self: center;
+  }
+
+  .row5-left { 
+    grid-area: m; 
+    justify-self: center;
+  }
+
+  .row5-center { 
+      grid-area: n; 
+      justify-self: center;
+  }
+
+  .row5-right { 
+    grid-area: o; 
+    justify-self: center;
+  }
 
 
   
 
-/*Bottom Navbar*/
+/*Navigation*/
 
 .bottom-nav
 {
@@ -147,6 +207,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     border-radius: 30px 30px 0px 0px;*/
 }
 
+
   .navbtn{
       background-color: #fff; 
       font-family: como, sans-serif; 
@@ -159,12 +220,38 @@ html, body {margin: 0; height: 100%; overflow: hidden}
       height: 70px; 
       margin: 5%;  
       border-radius: 40px;
-      border-color:#89DAFF;
-      box-shadow: 0px 1px 5px 0px #89DAFF;
+      border-color:#255f85;
+      box-shadow: 0px 0px 5px 2px #255f85;
       border-style: solid;
       align-items: center;
       
   }
+  
+  .pulse-navbtn {
+    
+    animation: pulse-white 2s infinite;
+  }
+  
+  @keyframes pulse-white {
+    0% {
+      transform: scale(0.95);
+      border-color: #ffffff;
+      box-shadow: 0 0 0 0 #255f85;
+    }
+    
+    70% {
+      transform: scale(1);
+      border-color: #ffffff; 
+      box-shadow: 0 0 10px 10px #fcd592;
+    }
+    
+    100% {
+      transform: scale(0.95);
+      border-color: #ffffff;
+      box-shadow: 0 0 5px 5px #255f85;
+    }
+  }
+
 
   .navbtn:hover {
       border: 3px #333333; 
@@ -173,14 +260,18 @@ html, body {margin: 0; height: 100%; overflow: hidden}
           box-shadow:
           0 2.8px 2.2px rgba(0, 0, 0, 0.034),
           0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px #89DAFF,
+          0 12.5px 10px #ffc857,
           0 22.3px 17.9px rgba(0, 0, 0, 0.072),
           0 41.8px 33.4px rgba(0, 0, 0, 0.086),
           0 100px 80px rgba(0, 0, 0, 0.12)
         ;
-        font-weight: 700; 
-      
+      font-weight: 700; 
     }
+
+  .pulse-navbtn:hover, 
+  .pulse-navbtn:focus { 
+    animation-name: unset; 
+  }
 
    .current {
     border: 3px #333333; 
@@ -194,6 +285,28 @@ html, body {margin: 0; height: 100%; overflow: hidden}
        text-decoration: none;
        color: #333333; 
    }
+
+   .back-btn
+{
+    width: 50%;
+    position: fixed;
+    bottom: 0px;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 60px;
+    list-style: none;
+   /* background-color: #f7f7ff;
+    box-shadow: 0px 3px 15px;
+    border-radius: 30px 30px 0px 0px;*/
+}
+
+@media only screen and (max-width: 479px) { 
+  .back-btn{ 
+    width: 10%; 
+  }
+}
 
       
 
