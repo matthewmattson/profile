@@ -1,45 +1,110 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="node_modules/swup/dist/swup.min.js"></script>
-    <script defer src="swupscript.js"></script>
+    
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dmq7yob.css">
+    <link rel="stylesheet" href="swiper.css" />
+   
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="swupscript.js"></script>
+    
+
+
+
     <title>Home</title>
 </head>
 <body>
     <main>
         <div class="grid-container">
-            <div class="row1-center"><img id="logo" src="/img/mattmattsonv3.png"></div>
-            <div class="row3-center"><img id="matt" src="img/IMG_4108.jpeg" alt="this should be a picture of Matt">
-            </div>
-            <div class="row3-center" id="txtmatt">
-                <h1>Hi, I'm Matt Mattson!</h1>
+            <div class="header"><a href="index.html"><img id="logo" src="/img/mmlogov2.png"></a></div>
+            <div class="hero">
+                <img id="matt" src="img/IMG_4108.jpeg" alt="this should be a picture of Matt">
+                <h1>Hi, I'm <img id="name" src="/img/mattlogov2.png"></h1>
                 <h3>A UX Researcher & Designer based in Denver, CO.</h3>
+                <a href="https://www.linkedin.com/in/mattsonmatt/"><img id="linkedinicon" src="img/linkedin.png"></a> 
+                <a href="https://medium.com/@mattmattson"><img id="mediumicon" src="img/medium.png"></a> 
             </div>
             
-            <div class="bottom-center">
-                <nav class="bottom-nav"> 
-                    <!--<button class="navbtn current"><a href="/index.html">Home</a></button>-->
-                    <button class ="navbtn pulse-navbtn"><a href="/mystory.html">My Story</a></button>
-                    <button class="navbtn"><a href="/projects.html">Projects</a></button>
-                    <button class="navbtn"><a href="/articles.html">Articles</a></button>
-                </nav>
-            </div>   
+           <div class="about">
+            
+            <h1 class="aboutheader"><img id="sectionheader" src="img/storyv2.png"></h1>
+          
+            <ul class="aboutme">
+                <li id="about">Marketer turned UX Researcher & Designer. For the past 7 years I've spent my time in front-end roles; analytics, web management, and more recently conversion rate optimization. From research to experimentation, I love the scientific process involved in understanding what drives different users actions in an array of digital settings.</li>
+                <br>
+                
+                <li id="about">As of February 2021, I'm actively seeking a UX Researcher or Designer role. I'm also open to contract work.</li>
+                <br>
+
+                <li id="about">Outside of work I love spending time with my wife. Reading about psychology, art, behavior, and mathematics. Playing with my Rhodesian Ridgebacks. Working out (Yoga & Manic Training). Uphill snowboarding 🏂  Eating plants 🥒 </li>
+                <button type="button" class="resumebtn" onclick="document.location='https://zety.com/mycv/mattmattson'">View My Resume</button>
+            </ul>
+
+            
+
+           </div>
+
+
+           <div class="projects">
+            <h1 class="projectheader"><img id="sectionheader" src="img/projectsv2.png"></h1>
+            <div class="projectcontent">  
+            <div class="carouselcard">
+                <a href="evolve.html">
+                <img id="carousel" src="img/evolvelogo.png">
+                <p id="projectname">Landing Page Redesign</p></a>
+                <p id="projectdesc">Evolve Vacation Rental</p>
+                <p id="projectdesc">2020</p>
+                <button type="button" class="projectbtn pulse-projectbtn" onclick="document.location='evolve.html'">View</button>
+            </div>
+            </div>
+           </div>
+
+
+           <div class="quotes">
+            <h1 class="quotesheader"><img id="sectionheader" src="img/wordsv2.png"></h1>
+            <div class="quotescontent">
+                <div class="quotescard swiper-container">
+
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img id="quoteimg" src="img/thea.jpeg">
+                                <p id="quotes">"As a copywriter, it is very exciting to get to work with someone like Matt — because you get to watch the numbers climb with every project he touches. Matt is always dreaming up ways to make the user experience better, easier, and more effective. Along with using data to drive results, Matt has an uncanny ability to put himself in the audience's shoes to figure out what affects their decisions. He's also a strong leader, advocating for the team, making sure all voices feel heard, and leading brainstorming sessions.
+            
+                                Matt is a joy to work with, and anyone would be lucky to have him on their team."</p>
+                                
+                                <p id="quoteauthor">-Thea Weiss</p></div>
+                            <div class="swiper-slide">
+                                <img id="quoteimg" src="img/geraldine.jpeg">
+                                <p id="quotes">"Matt is a knowledgeable, self-starter and hard-working individual. I worked directly with Matt and was a part of a site optimization task force that he started for our company. This task force was a much needed effort to unite cross-functional teams through experimentation, Matt saw and opportunity and didn't hesitate to take action. By creating a singular process for website experimentation, he reduced the duplicate work that was happening and created a collaborative environment to improve our conversions. Aside from that, Matt is a pleasure to be around and a team player, any organization would be lucky to have him!"</p>
+                                
+                                <p id="quoteauthor">-Geraldine Dagen</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img id="quoteimg" src="img/peenaz.jpeg">
+                                <p id="quotes">"'Action-Oriented' comes to mind when I think of Matt. I had the pleasure of working with Matt during my time with AB Tasty. He is truly passionate about improving the customer journey through improved UX, testing, and personalization. Matt successfully built an experimentation and optimization program at Evolve Vacation Rental with tremendous results in increasing qualified visitor conversion rates. Matt has dedicated his time to research conversion rate optimization tools, UX principals and use cases with the goal of turning insights into data-driven decisions. What is particularly admirable about Matt is that he is willing to share his research and experiences with the broader professional community."</p>
+                                
+                                <p id="quoteauthor">-Peenaz Devani</p>
+                            </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+           </div>
+
+           
+           <div class="footer">
+            <a href="index.html"><img id="footer" src="/img/mattlogov2.png"></a>
+           </div>  
         </div>
 
         
-    </main>
-   
-
-    
-
-   
-    
-    
-    
+    </main>  
 </body>
 </html>
